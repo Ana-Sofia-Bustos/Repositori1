@@ -9,22 +9,60 @@
 # - Entre -75 dBm i menys de -67 dBm: feble
 # - Inferior a -75 dBm: molt feble
 
+senyal = float(input("Ingresa el nivell de senyal rebut en dBm: "))
+if senyal >= -50:
+    print (f" la {senyal} es excel·lent")
+elif -50 < senyal <= -67:
+    print(f"la {senyal} es bona")
+elif -67 < senyal <=-75:
+    print (f"la {senyal}es feble")
+else:
+    print (f"la {senyal} es molt feble")
+
 
 # Exercici 2: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
 
+
+potencia = float(input("Ingresa la potencia de la connexió de la dibra optica en dBm:"))
+if -27 <= potencia <= -8:
+    print (f"la {potencia} de la connexió es acceptable")
+elif potencia < -8:
+    print (f"la {potencia} de la connexió es massa alta")
+else:
+    print (f"la {potencia} de la connexió es massa baixa")
+
+
 # Exercici 3: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
+
+consum = float(input("Ingresa el consum de dades en GB:"))
+if consum > 20:
+    limit = consum-20
+    print (f"El consum de dades ha superat el limit de 20GB amb {limit} GB adiccionals")
+else:
+    print ("El consum de dades es troba dins del limit de 20GB")
+
 
 # Exercici 4: Diagnòstic d'una connexió de fibra
 # Demana si l'indicador LOS del terminal òptic està encès i si l'indicador
 # d'Internet del router està encès. Segons aquestes dues dades, indica si cal
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
+
+indicadorLOS = input("Indica si l'indicador LOS esta encés (1 per si i 0 o no): ")
+indicadorROU= input("Indica si l'indicador del ROUTER esta encés (1 per si i 0 per no):")
+if indicadorLOS == 0 and indicadorROU == 1:
+    print("ha de revisar el cable de fibra")
+elif indicadorLOS == 1 and indicadorROU ==0:
+    print ("ha de revisar el servei del proveïdor")
+else:
+    print ("la connexió sembla funcionar correctament")
+
 
 # Exercici 5: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
