@@ -12,9 +12,9 @@
 senyal = float(input("Ingresa el nivell de senyal rebut en dBm: "))
 if senyal >= -50:
     print (f" la {senyal} es excel·lent")
-elif -50 < senyal <= -67:
+elif -50 <= senyal < -67:
     print(f"la {senyal} es bona")
-elif -67 < senyal <=-75:
+elif -67 <= senyal <-75:
     print (f"la {senyal}es feble")
 else:
     print (f"la {senyal} es molt feble")
@@ -29,7 +29,7 @@ else:
 potencia = float(input("Ingresa la potencia de la connexió de la dibra optica en dBm:"))
 if -27 <= potencia <= -8:
     print (f"la {potencia} de la connexió es acceptable")
-elif potencia < -8:
+elif potencia > -8:
     print (f"la {potencia} de la connexió es massa alta")
 else:
     print (f"la {potencia} de la connexió es massa baixa")
@@ -54,21 +54,33 @@ else:
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
 
-indicadorLOS = input("Indica si l'indicador LOS esta encés (1 per si i 0 o no): ")
-indicadorROU= input("Indica si l'indicador del ROUTER esta encés (1 per si i 0 per no):")
-if indicadorLOS == 0 and indicadorROU == 1:
-    print("ha de revisar el cable de fibra")
-elif indicadorLOS == 1 and indicadorROU ==0:
-    print ("ha de revisar el servei del proveïdor")
-else:
-    print ("la connexió sembla funcionar correctament")
+indicadorLOS = int(input("Indica si l'indicador LOS està encès (1 per sí, 0 per no): "))
+indicadorROU = int(input("Indica si l'indicador del ROUTER està encès (1 per sí, 0 per no): "))
 
+# Entenc que LOS encès (1) significa "Loss Of Signal" (fallida física)
+if indicadorLOS == 1:
+    print("Ha de revisar el cable de fibra")
+elif indicadorLOS == 0 and indicadorROU == 0:
+    print("Ha de revisar el servei del proveïdor")
+else:
+    # Si no hi ha alarma de cable ni falta de servei, tot funciona
+    print("La connexió sembla funcionar correctament")
 
 # Exercici 5: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
 # de comunicacions. Indica si el nivell és crític (menys del 20 %), baix
 # (del 20 % al 49 %) o suficient (50 % o més). Rebutja valors fora del rang
 # del 0 % al 100 %.
+bateria = int(input ("Indica el percentatge de bateria del SAI:"))
+if bateria < 0 or bateria > 100:
+    print("Percentatge indicat fora de rang")
+elif bateria < 20:
+    print("La bateria del SAI és crítica")
+elif 20 <= bateria <= 49:
+    print("La bateria del SAI és baixa")
+else:
+    print("La bateria del SAI és suficient")
+
 
 # Exercici 6: Qualitat d'una connexió de xarxa
 # Demana la latència en mil·lisegons i el percentatge de paquets perduts.
