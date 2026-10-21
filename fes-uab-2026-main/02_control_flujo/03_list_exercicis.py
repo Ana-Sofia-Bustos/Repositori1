@@ -49,8 +49,11 @@ lista30= lista2.pop (2)
 print (lista30)
 print(lista2)
 
-
-
 # Ejercicio 6: Reversa parcial
 # Dada una lista, invierte solo la primera mitad de la lista (utilizando slicing y concatenación).
-# Ejemplo: lista = [1, 2, 3, 4, 5, 6] -> Resultado: [3, 2, 1, 4, 5, 6]
+#([::-1]) o el mètode .reverse().
+# Ejemplo: 
+lista3 = [1, 2, 3, 4, 5, 6]  #-> Resultado: [3, 2, 1, 4, 5, 6]
+lista3[0:3] = lista3[0:3][::-1]
+print (lista3)
+
