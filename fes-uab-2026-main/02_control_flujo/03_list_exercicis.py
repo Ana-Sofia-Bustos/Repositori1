@@ -37,13 +37,19 @@ print (sandwich)
 # lista = [1, 2, 3]
 # Crea una nueva lista que contenga los elementos de la lista original duplicados.
 # Ejemplo: [1, 2, 3] -> [1, 2, 3, 1, 2, 3]
-lista = [1, 2, 3]
-lista2= lista+ lista
+lista1 = [1, 2, 3]
+lista2= lista1+ lista1
 
 
 # Ejercicio 5: Extrayendo el centro
 # Dada una lista con un número impar de elementos, extrae el elemento que se encuentra en el centro de la lista utilizando slicing.
-# Ejemplo: lista = [10, 20, 30, 40, 50] -> El centro es 30
+# Ejemplo: 
+lista2 = [10, 20, 30, 40, 50]
+lista30= lista2.pop (2)
+print (lista30)
+print(lista2)
+
+
 
 # Ejercicio 6: Reversa parcial
 # Dada una lista, invierte solo la primera mitad de la lista (utilizando slicing y concatenación).
