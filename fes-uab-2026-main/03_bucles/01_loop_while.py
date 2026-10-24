@@ -6,17 +6,17 @@
 import os
 os.system("cls") # neteja la pantalla
 
-# print("\n Bucle while:")
+print("\n Bucle while:")
 
-# Bucle amb una condició simple
-# comptador = 0
+Bucle amb una condició simple
+comptador = 0
 
-# {claus} [claudàtors] (parèntesis)
-# indentació "tabulació o sagnat"
+{claus} [claudàtors] (parèntesis)
+indentació "tabulació o sagnat"
 
-# while comptador <= 5:
-#     print(comptador)
-#     comptador += 1 # és molt important per evitar un bucle infinit
+while comptador <= 5:
+    print(comptador)
+    comptador += 1 # és molt important per evitar un bucle infinit
 
 # utilitzant la paraula break, per trencar el bucle
 # print("\n Bucle while amb break:")
