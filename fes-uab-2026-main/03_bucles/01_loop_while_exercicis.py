@@ -68,10 +68,37 @@ while numero2 >=1 and taula <=10:
 # Imprimeix tots els números primers menors o iguals que N fent servir un bucle while.
 # Un número és primer si només és divisible per 1 i per ell mateix.
 
+N= int(input("ingressa un numero enter positiu:"))
+primers=2 #2 per que es el primer numero primer
+while True:
+    if N>=1 and primers<=N:
+        es_primer=True
+        divisor=2
+        while divisor<primers:
+           if primers%divisor==0:
+            es_primer=False
+            break
+           divisor+=1
+        if es_primer ==True:
+            print(primers)
+        primers+=1
+    else:
+        break
+
+
 # Exercici 7: Suma fins al zero
 # Demana a l'usuari que introdueixi números enters.
 # Ves sumant els números introduïts fins que l'usuari introdueixi el 0.
 # Al final, imprimeix la suma total. El 0 només serveix per acabar i no s'ha de sumar.
+
+
+sumador=0
+enters= int(input("introdueix un numero enter:"))
+while enters !=0:
+    sumador+=enters
+    enters= int(input("introdueix un numero enter:")) 
+print (sumador)
+
 
 # Exercici 8: Comptar les xifres d'un número
 # Demana a l'usuari que introdueixi un número enter positiu.
