@@ -5,10 +5,25 @@
 # Exercici 1: Imprimir números parells
 # Imprimeix tots els números parells del 2 al 20 (inclosos) fent servir un bucle for.
 
+numeros = [2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+parells = []
+for num in numeros:
+    if num %2==0:
+        parells.append(num)
+print (parells)
+
 # Exercici 2: Calcular la mitjana d'una llista
 # Donada la llista de números següent:
 # numeros = [10, 20, 30, 40, 50]
 # Calcula la mitjana dels números fent servir un bucle for.
+
+numeros1 = [10, 20, 30, 40, 50]
+suma=0
+for num in numeros1:
+    suma+=num
+mitjana = suma/len(numeros1)
+print (mitjana)
+
 
 # Exercici 3: Buscar el màxim d'una llista
 # Donada la llista de números següent:
