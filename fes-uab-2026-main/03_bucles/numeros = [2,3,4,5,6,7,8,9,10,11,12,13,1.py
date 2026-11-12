@@ -1,6 +1,9 @@
-numeros1 = [10, 20, 30, 40, 50]
-suma=0
-for num in numeros1:
-    suma+=num
-mitjana = suma/len(numeros1)
-print (mitjana)
+paraules1 = ["casa", "arbre", "sol", "elefant", "lluna", "cotxe"]
+comptador=0
+lletra = input("ingressa una lletra:")
+for paraula in paraules1:
+    primera_lletra= paraula[0]
+    if lletra == primera_lletra:
+        comptador+=1
+print (comptador)
+    

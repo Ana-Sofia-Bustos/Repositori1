@@ -30,11 +30,27 @@ print (mitjana)
 # numeros = [15, 5, 25, 10, 20]
 # Troba el número màxim de la llista fent servir un bucle for.
 
+numeros2 = [15, 5, 25, 10, 20]
+max= numeros2[0] # creem la variable i indiquem que comença a comparar en el index 0 de la meva llista
+for num in numeros2:
+    if num > max:  # faig la comparacio de cada numero amb el meu incial maxim en aquesta cas es el primer numero de la llista , per tant ara 15 es el maxim i torna a comparar ara 5 amb 15 i aixi va fent 
+        max=num
+
+
+
 # Exercici 4: Filtrar cadenes per longitud
 # Donada la llista de paraules següent:
 # paraules = ["casa", "arbre", "sol", "elefant", "lluna"]
 # Crea una llista nova que contingui només les paraules amb més de 5 lletres
 # fent servir un bucle for i list comprehension.
+
+paraules = ["casa", "arbre", "sol", "elefant", "lluna"]
+llista = []
+for paraula in paraules:
+    if len(paraula) > 5:
+        llista.append(paraula)
+print (llista)
+    
 
 # Exercici 5: Comptar paraules que comencen per una lletra
 # Donada la llista de paraules següent:
@@ -42,6 +58,16 @@ print (mitjana)
 # Demana a l'usuari que introdueixi una lletra.
 # Compta quantes paraules de la llista comencen per aquesta lletra (sense diferenciar majúscules/minúscules).
 
+paraules1 = ["casa", "arbre", "sol", "elefant", "lluna", "cotxe"]
+comptador=0
+lletra = input("ingressa una lletra:").lower
+for paraula in paraules1:
+    primera_lletra= paraula.lower[0] # per cada paraula dins de paraules agafo la primera posicio 0 i en lower para que todo sea en minuscula
+    if lletra == primera_lletra: # si la lletra ingressada es igual a la primera lletra de alguna de les paraules ja que va fent el for fins que acabi el que hi ha dins 
+        comptador+=1 # com vull saber quantes vegades es repeteix tinc un comptador i cada vegada que coincideix sumo un i imprimeixo el meu comptador
+print (comptador)
+    
+    
 # Exercici 6: Mesures de tensió d'un sensor
 # Durant una prova s'han registrat les tensions següents (en volts):
 # tensions = [4.8, 5.0, 5.1, 4.9, 5.2]
