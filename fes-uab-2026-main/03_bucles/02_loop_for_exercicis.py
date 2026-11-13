@@ -72,12 +72,26 @@ print (comptador)
 # Durant una prova s'han registrat les tensions següents (en volts):
 # tensions = [4.8, 5.0, 5.1, 4.9, 5.2]
 # Fent servir un bucle for, calcula la tensió mitjana i imprimeix-la.
+tensions = [4.8, 5.0, 5.1, 4.9, 5.2]
+sumador = 0
+for tensio in tensions:
+    sumador+=tensio
+mitjana = sumador /len(tensions)
+print (mitjana)
 
 # Exercici 7: Corrent en resistències
 # En un circuit s'aplica una tensió de 12 V a aquestes resistències:
 # resistencies = [100, 220, 470, 1000]
 # Fent servir la llei d'Ohm (I = V / R) i un bucle for, calcula i imprimeix
 # el corrent que circula per cada resistència, en ampers.
+resistencies = [100, 220, 470, 1000]
+corrent =[]
+for resistencia in resistencies:
+    intensitat=12/resistencia
+    corrent.append(intensitat)
+print (corrent)
+
+
 
 # Exercici 8: Mostres que superen el llindar de soroll
 # Un receptor ha mesurat aquests nivells de soroll (en dBm):
