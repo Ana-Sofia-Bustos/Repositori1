@@ -1,8 +1,6 @@
-resistencies = [100, 220, 470, 1000]
-corrent =[]
-for resistencia in resistencies:
-    intensitat=12/resistencia
-    corrent.append(intensitat)
-print (corrent)
-
-    
+taula = []
+numero = int(input("Introdueix un numero:"))
+for i in range (1,11):
+    multiplicacio=numero*i
+    taula.append(multiplicacio)
+print (taula)

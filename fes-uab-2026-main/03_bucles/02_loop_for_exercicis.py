@@ -99,15 +99,39 @@ print (corrent)
 # Compta, amb un bucle for, quantes mostres superen el llindar de -80 dBm
 # (és a dir, tenen un valor més gran que -80) i imprimeix el resultat.
 
+nivells_soroll = [-92, -85, -78, -95, -81, -88]
+soroll_superat= []
+for soroll in nivells_soroll:
+    if soroll > -80:
+        soroll_superat.append(soroll)
+print (len(soroll_superat))
+
 # Exercici 9: Càlcul de la taxa d'error de bits
 # Compara els bits transmesos i rebuts:
 # bits_transmesos = [1, 0, 1, 1, 0, 0, 1, 0]
 # bits_rebuts =     [1, 0, 0, 1, 0, 1, 1, 0]
 # Fent servir un bucle for i els índexs de les llistes, compta quants bits
 # són diferents. Calcula i imprimeix la taxa d'error (bits diferents / total de bits).
+bits_transmesos = [1, 0, 1, 1, 0, 0, 1, 0]
+bits_rebuts =     [1, 0, 0, 1, 0, 1, 1, 0]
+bits_diferents=0
+for i in range (len(bits_transmesos)) #comparo el bit de la posició 'i' d'una llista amb el de l'altre
+#generar una seqüència de números que representen les posicions (els índexs) d'una llista, des del 0 fins a l'últim element.
+if bits_transmesos [i] != bits_rebuts[i]:
+    bits_diferents+=1
+taxa= bits_diferents / len(bits_transmesos)
+print (taxa)
+
 
 # Exercici 10: Període d'un senyal
 # Donades les freqüències següents, en hertzs:
 # frequencies = [50, 100, 500, 1000]
 # Fent servir un bucle for, calcula el període de cada senyal amb la fórmula
 # T = 1 / f i imprimeix cada freqüència amb el seu període en segons.
+frequencies = [50, 100, 500, 1000]
+periodes =[]
+for frequencia in frequencies:
+    periode= 1/frequencia
+    periodes.append(periode)
+print (periodes)
+
